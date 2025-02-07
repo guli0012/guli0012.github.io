@@ -1,0 +1,83 @@
+
+
+body{
+    background-color: rgb(197, 222, 222);
+    font-family: Arial, sans-sarif;
+}
+/* this is a comment */
+
+h1{
+    color:#083e73;
+    text-align: center;
+}
+
+p{
+    font-size: 20px;
+}
+
+h1,h2{
+    text-decoration: underline;
+}
+
+/* Class Selection */
+.btn{
+    background-color: #083e73;
+    color:aliceblue
+    padding:16px 20px;
+    border-radius: 5ps;
+    cursor: pointer;
+    font-size: 16px
+    border: none;
+    /* outline */
+    box-shadow: 1px 1px 7px 3px #b8b5b5
+}
+
+.btn:hover{
+    background-color: aliceblue;
+    color: #083e73;
+}
+/* id selector */
+#intoPara{
+    font-style: italic;
+}
+
+
+article h2{
+    color:red
+}
+
+h2{
+    color: orange;
+}
+
+/* li{
+    color: rgb(93,0,255);
+}*/
+
+ul li:nth-child(2n+1){
+    color:red
+}
+
+
+.seconcClass{
+    border: 2px solid #f40707;
+}
+
+
+/* form styles */
+form{
+    background-color: aliceblue;
+    max-width: 600px;
+   /*margin vs padding */
+   /* padding: 20px; top bottom left and right
+   margin: 20px 30px; top and bottom, left and right
+   /*margin: 10px 20px 30px 40px;
+   /* top right bottom left */
+   padding: 20px;
+   margin: 20px auto;
+   border-radius: 20px;
+
+}
+input,textarea {
+    display: block;
+}
