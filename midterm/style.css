@@ -1,0 +1,157 @@
+
+
+/* Global Styles */
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-size: cover;
+    background-attachment: fixed;
+    max-width: 750px;
+    margin: auto;
+}
+
+/* Header Section: Neptune Image */
+header {
+    background-image: url("images/neptune.jpg"); /* Neptune Image */
+    background-size: cover;
+    background-position: center;
+    text-align: center;
+    height: 300px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+/* #d4e9e7 */
+
+.site-title {
+    font-size: 36px;
+    background: rgba(0, 0, 0, 0.5);
+    padding: 10px 20px;
+    border-radius: 10px;
+    color: #fff;
+}
+
+main{
+
+    background-color: #d4e9e7;
+    padding: 10px;
+}
+
+/* Navigation */
+nav ul {
+    list-style: none;
+    padding:  0;
+    text-align: center;
+    /* background: rgba(0, 0, 0, 0.7); */
+    margin: 0;
+    display: flex ;
+    justify-content: space-around;
+}
+
+nav ul li {
+    display: inline;
+    margin: 0 15px;
+    padding: 15px 0;
+    width: 33.333333%;
+    position: relative  ;
+    color: #000;
+    font-weight: bolder;
+    /* border: 1px solid #000; */
+}
+
+nav ul li::after{
+    content: "";
+    position: absolute;
+    width: 1px;
+    height: 25px;
+    background: #000;
+    right: 0;
+    top: 10px;
+}
+
+
+nav ul li:last-child::after{
+    display: none;
+}
+
+nav ul li a {
+    text-decoration: none;
+    color: #000;
+    font-weight: bolder;
+}
+
+
+
+/* Article Section: Image with Wrapped Text */
+.article-image {
+    float: left;
+    margin-right: 15px;
+    width: 200px;
+    height: auto;
+    border-radius: 5px;
+}
+
+/* Facts Section */
+.facts {
+    padding: 20px;
+}
+
+.facts ul {
+    list-style-type: square;
+    padding-left: 20px;
+}
+
+/* Contact Form */
+.contact-form {
+    text-align: center;
+    padding: 20px;
+    border: 1px solid #000;
+}
+
+.contact-form form {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    margin: auto;
+}
+
+.contact-form form label {
+    font-weight: bold;
+    margin-top: 10px;
+    text-align: left;
+}
+
+.contact-form input, 
+.contact-form textarea {
+    padding: 8px;
+    margin-top: 5px;
+    width: 100%;
+}
+
+
+.contact-form input[type="radio"] {
+  width: auto;
+}
+
+.contact-form button {
+    margin-top: 10px;
+    padding: 10px;
+    background-color: #d4e9e7;
+    color: white;
+    border: none;
+    cursor: pointer;
+    width: 100px;
+    border: 1px solid #000;
+    text-transform: uppercase;
+    color: #000;
+}
+
+.contact-form button:hover {
+    background-color: navy;
+}
+
+.contact-form .visit_box{
+    text-align: left;
+}
