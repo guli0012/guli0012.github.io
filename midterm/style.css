@@ -155,3 +155,7 @@ nav ul li a {
 .contact-form .visit_box{
     text-align: left;
 }
+
+main .copy_right{
+    text-align: right;
+}
