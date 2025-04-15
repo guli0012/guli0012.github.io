@@ -1,244 +1,149 @@
-/*
-Three Star Media Website Styles
-Name: Gulifeila Alimujiang
-*/
+/* Three Star Media - Final CSS
+Name: Gulifeila Alimujiang */
 
-/* Basic Reset - because browsers add weird spacing */
+/* Basic reset to remove default spacing */
 * {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
 }
 
-/* Font Import - using Open Sans like required */
-@import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;600;700&display=swap');
-
-/* Body Styles - mobile first! */
-body {
-  font-family: 'Open Sans', Arial, sans-serif;
-  line-height: 1.5;
-  color: #222;
-  background: white;
-  max-width: 1200px;
-  margin: 0 auto;
+/* Set base font size for better scaling */
+html {
+  font-size: 16px;
 }
 
-/* Make images behave */
+/* Main body styles */
+body {
+  font-family: 'Open Sans', sans-serif;
+  line-height: 1.4;
+  color: #222;
+  max-width: 1200px;
+  margin: 0 auto;
+  overflow-x: hidden; /* Prevent horizontal scrolling */
+}
+
+/* Make all images responsive */
 img {
   max-width: 100%;
   height: auto;
   display: block;
 }
 
-/* Header Styles */
+/* Header styles */
 .header-section {
-  background: #222;
-  padding: 1rem;
+  background-color: #222;
+  padding: 0.8rem;
 }
 
+/* Logo sizing */
 .logo {
-  width: 150px;
-  margin: 0 auto 1rem;
+  width: 120px; /* Smaller logo for mobile */
+  margin: 0 auto;
 }
 
-/* Navigation */
+/* Navigation menu */
 .main-nav ul {
   list-style: none;
   text-align: center;
+  padding: 0.5rem 0;
 }
 
 .main-nav li {
-  margin-bottom: 0.5rem;
+  display: inline-block;
+  margin: 0 0.5rem;
 }
 
 .main-nav a {
   color: white;
   text-decoration: none;
-  font-weight: 600;
+  font-size: 0.9rem; /* Smaller nav text */
 }
 
-/* Search Box */
-.search-form {
-  margin: 1rem auto;
-  text-align: center;
-}
-
-.search-form input {
-  padding: 0.5rem;
-  width: 70%;
-}
-
-.search-form button {
-  padding: 0.5rem 1rem;
-  background: #c78c06;
-  color: white;
-  border: none;
-}
-
-/* Hero Section - fixed image sizing */
+/* Hero section with fixed image height */
 .hero-section {
-  background: #222;
-  color: white;
-  padding: 2rem 1rem;
-  position: relative;
+  padding: 1.5rem;
+  text-align: center;
 }
 
 .hero-section img {
-  width: 100%;
-  max-height: 300px;
-  object-fit: cover;
-  margin-top: 1rem;
-}
-
-/* Button Styles */
-.btn {
-  display: inline-block;
-  padding: 0.6rem 1.2rem;
-  background: #c78c06;
-  color: white;
-  text-decoration: none;
-  border-radius: 4px;
-  margin: 0.5rem 0;
-}
-
-/* About Section - fixed image overflow */
-.about-section {
-  padding: 2rem 1rem;
-}
-
-.about-section img {
-  max-height: 250px;
-  object-fit: contain;
+  max-height: 200px; /* Fixed image height */
+  width: auto;
   margin: 1rem auto;
 }
 
-/* Services Grid */
-.services-section {
-  padding: 2rem 1rem;
+/* Text content sizing */
+.hero-section h1 {
+  font-size: 1.5rem;
+  margin-bottom: 1rem;
 }
 
-.service-grid {
-  display: grid;
-  grid-template-columns: 1fr;
-  gap: 1rem;
+.hero-section p {
+  font-size: 0.9rem; /* Smaller paragraph text */
+  margin-bottom: 1rem;
 }
 
-.service-card {
-  background: #ffe6ac;
+/* About Us section */
+.about-section {
   padding: 1.5rem;
 }
 
-/* Vision Section */
-.vision-section {
-  background: #222;
+.about-section img {
+  max-height: 180px; /* Smaller about image */
+  margin: 1rem auto;
+}
+
+/* Button styles */
+.btn {
+  display: inline-block;
+  padding: 0.5rem 1rem;
+  font-size: 0.9rem; /* Smaller button text */
+  background-color: #c78c06;
   color: white;
-  padding: 2rem;
-  margin: 1rem 0;
+  text-decoration: none;
+  border-radius: 3px;
 }
 
-/* Team Section - using flexbox */
-.team-section {
-  padding: 2rem 1rem;
-}
-
-.team-members {
-  display: flex;
-  flex-direction: column;
-  gap: 1.5rem;
-}
-
-.member img {
-  max-height: 200px;
-  object-fit: cover;
-}
-
-/* Contact Section */
-.contact-section {
-  padding: 2rem 1rem;
-}
-
-.contact-form input,
-.contact-form textarea {
-  width: 100%;
-  padding: 0.5rem;
-  margin: 0.5rem 0;
-}
-
-/* Hours Table */
-.hours-section {
-  padding: 1rem;
-}
-
-table {
-  width: 100%;
-  border: 1px solid #ddd;
-}
-
-th {
-  background: #222;
-  color: white;
-  padding: 0.5rem;
-}
-
-/* Footer */
-.footer-section {
-  background: #222;
-  color: white;
-  text-align: center;
-  padding: 1rem;
-}
-
-/* Media Queries - desktop styles */
-@media (min-width: 760px) {
-  .top-bar {
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
+/* Mobile-first media queries */
+@media screen and (min-width: 760px) {
+  /* Slightly larger text on tablets */
+  body {
+    font-size: 1rem;
   }
-
-  .main-nav ul {
-    display: flex;
-    gap: 1.5rem;
+  
+  .logo {
+    width: 150px;
   }
+  
+  .hero-section img {
+    max-height: 250px;
+  }
+  
+  .about-section img {
+    max-height: 220px;
+  }
+}
 
+@media screen and (min-width: 992px) {
+  /* Desktop adjustments */
   .hero-section {
     display: flex;
     align-items: center;
-    gap: 2rem;
+    text-align: left;
   }
-
+  
   .hero-section img {
+    max-height: 300px;
     width: 50%;
-    max-height: 400px;
   }
-
+  
   .about-section {
     display: flex;
     gap: 2rem;
   }
-
+  
   .about-section img {
     width: 40%;
-  }
-
-  .service-grid {
-    grid-template-columns: repeat(2, 1fr);
-  }
-
-  .team-members {
-    flex-direction: row;
-  }
-}
-
-/* Larger desktop adjustments */
-@media (min-width: 992px) {
-  .service-grid {
-    grid-template-columns: repeat(3, 1fr);
-  }
-  
-  .service-card:last-child {
-    grid-column: span 3;
-    max-width: 50%;
-    margin: 0 auto;
+    max-height: none;
   }
 }
