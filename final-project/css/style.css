@@ -1,1 +1,68 @@
+/* style.css */
+/* Author: Gulifeila Alimujiang
+Description: Final Project Styling - Mobile First Approach */
 
+body {
+  font-family: 'Open Sans' , sans-serif;
+  margin: 0;
+  padding: 0;
+  background: #fff;
+  color: #222;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+}
+img {
+  max-width: 100%;
+  height: auto;
+  display: block;
+}
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 20px;
+
+  .header-section .top-bar {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 10px;
+  }
+  
+  .service-grid {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 20px;
+    {
+
+    :root {
+      --yellow: #c78c06;
+      --light-yellow: #ffe6ac;
+      --black: #222;
+      --white: #fff
+    }
+
+    .btn {
+      background-color: var(--yellow);
+      color: var(--black);
+      padding: 10px 20px;
+      display: inline-block;
+      margin-top: 10px;
+
+      @media (min-width: 760px) {
+        .header-section .top-bar {
+          flex-direction: row;
+          justify-content: space-between;
+          align-items: center;
+        }
+
+        .service-grid {
+          grid-template-cplumns: repeat(3, 1fr);
+        }
+        .team-members {
+          display: flex;
+          gap: 20px;
+        }
+    
