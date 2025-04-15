@@ -1,6 +1,6 @@
 /*
-Final Project
-Student: Gulifeila Alimujiang
+Three Star Media - Complete Styles
+Student: Gulifeila
 */
 
 /* Base Styles */
@@ -17,6 +17,7 @@ body {
   color: #222;
   max-width: 1200px;
   margin: 0 auto;
+  background: white;
 }
 
 /* Header */
@@ -28,6 +29,7 @@ body {
 .logo {
   width: 100px;
   margin: 0 auto 10px;
+  display: block;
 }
 
 .main-nav ul {
@@ -42,6 +44,25 @@ body {
   color: white;
   text-decoration: none;
   font-size: 13px;
+}
+
+.search-form {
+  margin-top: 12px;
+  display: flex;
+  justify-content: center;
+}
+
+.search-form input {
+  padding: 6px;
+  width: 65%;
+  max-width: 200px;
+}
+
+.search-form button {
+  padding: 6px 12px;
+  background: #c78c06;
+  color: white;
+  border: none;
 }
 
 /* Hero Section */
@@ -70,7 +91,7 @@ body {
   object-fit: cover;
 }
 
-/* Services */
+/* Services Section */
 .services-section {
   padding: 20px 15px;
 }
@@ -92,6 +113,76 @@ body {
   object-fit: cover;
 }
 
+/* Team Section */
+.team-section {
+  padding: 30px 15px;
+}
+
+.team-section h2 {
+  text-align: center;
+  margin-bottom: 25px;
+  color: #222;
+}
+
+.team-members {
+  display: flex;
+  flex-direction: column;
+  gap: 30px;
+}
+
+.member {
+  background: #f8f8f8;
+  padding: 25px;
+  border-radius: 5px;
+  text-align: center;
+}
+
+.member img {
+  width: 150px;
+  height: 150px;
+  object-fit: cover;
+  border-radius: 50%;
+  border: 3px solid #c78c06;
+  margin: 0 auto 15px;
+}
+
+.member h3 {
+  color: #c78c06;
+  margin-bottom: 5px;
+}
+
+.member p:first-of-type {
+  color: #222;
+  font-weight: 600;
+  margin-bottom: 15px;
+}
+
+.member p:last-of-type {
+  color: #555;
+}
+
+/* Vision Section */
+.vision-section {
+  background: #222;
+  color: white;
+  padding: 30px 20px;
+  margin: 20px 0;
+  text-align: center;
+}
+
+/* Contact Section */
+.contact-section {
+  padding: 20px 15px;
+}
+
+/* Footer */
+.footer-section {
+  background: #222;
+  color: white;
+  text-align: center;
+  padding: 20px;
+}
+
 /* Buttons */
 .btn {
   display: inline-block;
@@ -100,6 +191,7 @@ body {
   color: white;
   text-decoration: none;
   border-radius: 3px;
+  font-size: 13px;
 }
 
 /* Media Queries */
@@ -107,27 +199,61 @@ body {
   body {
     font-size: 15px;
   }
-  
+
   .header-section {
     display: flex;
     align-items: center;
+    justify-content: space-between;
     padding: 15px 25px;
   }
-  
+
+  .logo {
+    margin: 0;
+  }
+
+  .search-form {
+    margin-top: 0;
+  }
+
   .hero-section {
     display: flex;
     align-items: center;
     text-align: left;
+    padding: 30px;
   }
-  
+
   .hero-section img {
     width: 45%;
     height: 250px;
     margin-left: 25px;
   }
-  
+
+  .about-section {
+    display: flex;
+    gap: 25px;
+    align-items: center;
+  }
+
+  .about-section img {
+    width: 40%;
+    height: 200px;
+  }
+
   .service-grid {
     grid-template-columns: repeat(2, 1fr);
+  }
+
+  .team-members {
+    flex-direction: row;
+  }
+
+  .member {
+    flex: 1;
+    text-align: left;
+  }
+
+  .member img {
+    margin: 0 0 15px 0;
   }
 }
 
