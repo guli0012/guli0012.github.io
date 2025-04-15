@@ -1,9 +1,10 @@
-/*
-Three Star Media - Complete Styles
-Student: Gulifeila
+/* 
+Three Star Media - Design Matching CSS
+Student: [Your Name]
+Submission: [Date]
 */
 
-/* Base Styles */
+/* Base reset and font settings */
 * {
   margin: 0;
   padding: 0;
@@ -12,253 +13,125 @@ Student: Gulifeila
 
 body {
   font-family: 'Open Sans', sans-serif;
-  font-size: 14px;
-  line-height: 1.4;
-  color: #222;
+  font-size: 15px;
+  line-height: 1.5;
+  color: #333;
   max-width: 1200px;
   margin: 0 auto;
-  background: white;
 }
 
-/* Header */
-.header-section {
-  background: #222;
-  padding: 12px 15px;
-}
-
-.logo {
-  width: 100px;
-  margin: 0 auto 10px;
-  display: block;
-}
-
-.main-nav ul {
-  list-style: none;
-  display: flex;
-  justify-content: center;
-  flex-wrap: wrap;
-  gap: 8px 15px;
-}
-
-.main-nav a {
-  color: white;
-  text-decoration: none;
-  font-size: 13px;
-}
-
-.search-form {
-  margin-top: 12px;
-  display: flex;
-  justify-content: center;
-}
-
-.search-form input {
-  padding: 6px;
-  width: 65%;
-  max-width: 200px;
-}
-
-.search-form button {
-  padding: 6px 12px;
-  background: #c78c06;
-  color: white;
-  border: none;
-}
-
-/* Hero Section */
-.hero-section {
+/* Vision section styling - dark background */
+.vision-section {
   background: #222;
   color: white;
-  padding: 20px 15px;
+  padding: 40px 25px;
+  margin: 30px 0;
   text-align: center;
 }
 
-.hero-section img {
-  width: 100%;
-  height: 180px;
-  object-fit: cover;
-  margin-top: 15px;
+.vision-section h2 {
+  font-size: 24px;
+  margin-bottom: 20px;
 }
 
-/* About Section */
-.about-section {
-  padding: 20px 15px;
-}
-
-.about-section img {
-  width: 100%;
-  height: 150px;
-  object-fit: cover;
-}
-
-/* Services Section */
-.services-section {
-  padding: 20px 15px;
-}
-
-.service-grid {
-  display: grid;
-  grid-template-columns: 1fr;
-  gap: 15px;
-}
-
-.service-card {
-  background: #ffe6ac;
-  padding: 15px;
-}
-
-.service-card img {
-  width: 100%;
-  height: 120px;
-  object-fit: cover;
-}
-
-/* Team Section */
+/* Team section layout */
 .team-section {
-  padding: 30px 15px;
-}
-
-.team-section h2 {
-  text-align: center;
-  margin-bottom: 25px;
-  color: #222;
+  padding: 40px 20px;
 }
 
 .team-members {
   display: flex;
   flex-direction: column;
-  gap: 30px;
+  gap: 40px;
+  max-width: 1000px;
+  margin: 0 auto;
 }
 
+/* Individual team member cards */
 .member {
-  background: #f8f8f8;
-  padding: 25px;
-  border-radius: 5px;
-  text-align: center;
+  display: flex;
+  flex-direction: column;
 }
 
 .member img {
-  width: 150px;
-  height: 150px;
-  object-fit: cover;
-  border-radius: 50%;
-  border: 3px solid #c78c06;
-  margin: 0 auto 15px;
+  width: 100%;
+  max-width: 300px;
+  margin: 0 auto;
+}
+
+.member-content {
+  text-align: center;
 }
 
 .member h3 {
-  color: #c78c06;
-  margin-bottom: 5px;
+  font-size: 20px;
+  color: #222;
+  margin: 15px 0 5px;
 }
 
-.member p:first-of-type {
-  color: #222;
+.member p.position {
+  color: #555;
   font-weight: 600;
   margin-bottom: 15px;
 }
 
-.member p:last-of-type {
-  color: #555;
-}
-
-/* Vision Section */
-.vision-section {
-  background: #222;
-  color: white;
-  padding: 30px 20px;
-  margin: 20px 0;
-  text-align: center;
-}
-
-/* Contact Section */
+/* Contact form styling */
 .contact-section {
-  padding: 20px 15px;
+  padding: 40px 20px;
 }
 
-/* Footer */
+.contact-form input,
+.contact-form textarea {
+  width: 100%;
+  padding: 10px;
+  margin-bottom: 20px;
+  border: 1px solid #ddd;
+}
+
+.contact-form button {
+  background: #c78c06;
+  color: white;
+  padding: 12px 25px;
+  border: none;
+}
+
+/* Footer section */
 .footer-section {
   background: #222;
   color: white;
+  padding: 30px 20px;
   text-align: center;
-  padding: 20px;
 }
 
-/* Buttons */
-.btn {
-  display: inline-block;
-  padding: 8px 16px;
-  background: #c78c06;
-  color: white;
-  text-decoration: none;
-  border-radius: 3px;
-  font-size: 13px;
-}
-
-/* Media Queries */
+/* Desktop layout adjustments */
 @media (min-width: 768px) {
-  body {
-    font-size: 15px;
-  }
-
-  .header-section {
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    padding: 15px 25px;
-  }
-
-  .logo {
-    margin: 0;
-  }
-
-  .search-form {
-    margin-top: 0;
-  }
-
-  .hero-section {
-    display: flex;
-    align-items: center;
-    text-align: left;
-    padding: 30px;
-  }
-
-  .hero-section img {
-    width: 45%;
-    height: 250px;
-    margin-left: 25px;
-  }
-
-  .about-section {
-    display: flex;
-    gap: 25px;
-    align-items: center;
-  }
-
-  .about-section img {
-    width: 40%;
-    height: 200px;
-  }
-
-  .service-grid {
-    grid-template-columns: repeat(2, 1fr);
-  }
-
   .team-members {
     flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-between;
   }
 
   .member {
-    flex: 1;
-    text-align: left;
+    flex: 0 1 48%;
+    flex-direction: row;
+    align-items: flex-start;
+    gap: 20px;
   }
 
   .member img {
-    margin: 0 0 15px 0;
+    width: 40%;
+    max-width: 200px;
+  }
+
+  .member-content {
+    width: 60%;
+    text-align: left;
   }
 }
 
+/* Larger screens */
 @media (min-width: 992px) {
-  .service-grid {
-    grid-template-columns: repeat(3, 1fr);
+  .member {
+    flex: 0 1 30%;
   }
 }
