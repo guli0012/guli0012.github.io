@@ -1,16 +1,6 @@
-/* 
-Three Star Media - Final Project CSS
-Student: Gulifeila Alimujiang
-*/
+/* Final Project - Gulifeila Alimujiang */
 
-:root {
-  --yellow: #c78c06;
-  --light-yellow: #ffe6ac;
-  --black: #222;
-  --white: #fff;
-}
-
-/* Base Reset */
+/* Base reset and font settings */
 * {
   margin: 0;
   padding: 0;
@@ -22,155 +12,25 @@ body {
   font-size: 15px;
   line-height: 1.5;
   color: #333;
-  background: var(--white);
   max-width: 1200px;
   margin: 0 auto;
 }
 
-/* Typography */
-h1, h2, h3 {
-  margin-bottom: 15px;
-  color: var(--black);
-}
-
-p {
-  margin-bottom: 10px;
-}
-
-/* Images */
-img {
-  max-width: 100%;
-  display: block;
-}
-
-/* Buttons */
-.btn,
-.contact-form button {
-  background-color: var(--yellow);
-  color: var(--black);
-  padding: 12px 24px;
-  border: none;
-  font-weight: bold;
-  cursor: pointer;
-  display: inline-block;
-  text-transform: none;
-}
-
-.btn::after {
-  content: " ►";
-  font-weight: normal;
-}
-
-/* Header */
-.header-section {
-  background-color: var(--black);
-  color: var(--white);
-  padding: 15px 20px;
-}
-
-.top-bar {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  gap: 10px;
-}
-
-.main-nav ul {
-  list-style: none;
-  display: flex;
-  flex-direction: column;
-  gap: 10px;
-  padding: 0;
-  margin: 0;
-  text-align: center;
-}
-
-.main-nav a {
-  color: white;
-  font-weight: bold;
-}
-
-.search-form {
-  margin-top: 10px;
-}
-
-.search-form input,
-.search-form button {
-  padding: 8px;
-  font-size: 14px;
-}
-
-@media (min-width: 760px) {
-  .top-bar {
-    flex-direction: row;
-    justify-content: space-between;
-  }
-
-  .main-nav ul {
-    flex-direction: row;
-  }
-
-  .search-form {
-    margin-top: 0;
-  }
-}
-
-/* Hero */
-.hero-section {
-  text-align: center;
-  padding: 40px 20px;
-}
-
-/* About */
-.about-section {
-  background-color: var(--light-yellow);
-  padding: 40px 20px;
-}
-
-.about-content {
-  display: flex;
-  flex-direction: column;
-  gap: 20px;
-}
-
-@media (min-width: 760px) {
-  .about-content {
-    flex-direction: row;
-    align-items: center;
-  }
-}
-
-/* Services */
-.services-section {
-  padding: 40px 20px;
-}
-
-.service-grid {
-  display: grid;
-  grid-template-columns: 1fr;
-  gap: 30px;
-}
-
-.service-card {
-  background-color: var(--light-yellow);
-  padding: 20px;
-}
-
-@media (min-width: 760px) {
-  .service-grid {
-    grid-template-columns: repeat(3, 1fr);
-  }
-}
-
-/* Vision */
+/* Vision section styling - dark background */
 .vision-section {
-  background-color: var(--black);
-  color: var(--white);
-  padding: 40px 20px;
+  background: #222;
+  color: white;
+  padding: 40px 25px;
+  margin: 30px 0;
   text-align: center;
 }
 
-/* Team */
+.vision-section h2 {
+  font-size: 24px;
+  margin-bottom: 20px;
+}
+
+/* Team section layout */
 .team-section {
   padding: 40px 20px;
 }
@@ -178,20 +38,21 @@ img {
 .team-members {
   display: flex;
   flex-direction: column;
-  gap: 30px;
+  gap: 40px;
+  max-width: 1000px;
+  margin: 0 auto;
 }
 
+/* Individual team member cards */
 .member {
-  background-color: var(--light-yellow);
-  padding: 20px;
   display: flex;
   flex-direction: column;
-  align-items: center;
 }
 
 .member img {
   width: 100%;
   max-width: 300px;
+  margin: 0 auto;
 }
 
 .member-content {
@@ -199,11 +60,47 @@ img {
 }
 
 .member h3 {
-  margin-top: 15px;
-  margin-bottom: 5px;
+  font-size: 20px;
+  color: #222;
+  margin: 15px 0 5px;
 }
 
-@media (min-width: 760px) {
+.member p.position {
+  color: #555;
+  font-weight: 600;
+  margin-bottom: 15px;
+}
+
+/* Contact form styling */
+.contact-section {
+  padding: 40px 20px;
+}
+
+.contact-form input,
+.contact-form textarea {
+  width: 100%;
+  padding: 10px;
+  margin-bottom: 20px;
+  border: 1px solid #ddd;
+}
+
+.contact-form button {
+  background: #c78c06;
+  color: white;
+  padding: 12px 25px;
+  border: none;
+}
+
+/* Footer section */
+.footer-section {
+  background: #222;
+  color: white;
+  padding: 30px 20px;
+  text-align: center;
+}
+
+/* Desktop layout adjustments */
+@media (min-width: 768px) {
   .team-members {
     flex-direction: row;
     flex-wrap: wrap;
@@ -211,14 +108,10 @@ img {
   }
 
   .member {
-    flex-direction: row;
-    gap: 20px;
     flex: 0 1 48%;
+    flex-direction: row;
     align-items: flex-start;
-  }
-
-  .member-content {
-    text-align: left;
+    gap: 20px;
   }
 
   .member img {
@@ -228,72 +121,13 @@ img {
 
   .member-content {
     width: 60%;
+    text-align: left;
   }
 }
 
-/* Contact */
-.contact-section {
-  padding: 40px 20px;
-}
-
-.contact-wrap {
-  display: flex;
-  flex-direction: column;
-  gap: 30px;
-}
-
-.contact-form input,
-.contact-form textarea {
-  width: 100%;
-  padding: 10px;
-  border: 1px solid #ddd;
-  margin-bottom: 15px;
-  font-size: 1rem;
-}
-
-.contact-form button {
-  background-color: var(--yellow);
-  color: var(--black);
-  font-weight: bold;
-  padding: 12px 24px;
-}
-
-@media (min-width: 760px) {
-  .contact-wrap {
-    flex-direction: row;
-    justify-content: space-between;
+/* Larger screens */
+@media (min-width: 992px) {
+  .member {
+    flex: 0 1 30%;
   }
-
-  .contact-form,
-  .map {
-    width: 48%;
-  }
-}
-
-/* Hours */
-.hours-section {
-  padding: 40px 20px;
-}
-
-.hours-section table {
-  width: 100%;
-  border-collapse: collapse;
-  margin-top: 10px;
-}
-
-.hours-section th,
-.hours-section td {
-  border: 1px solid #ccc;
-  padding: 12px;
-  text-align: left;
-  background-color: var(--light-yellow);
-}
-
-/* Footer */
-.footer-section {
-  background-color: var(--black);
-  color: white;
-  padding: 25px 20px;
-  text-align: center;
-  font-size: 0.9rem;
 }
