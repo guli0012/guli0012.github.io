@@ -1,133 +1,139 @@
-/* Final Project - Gulifeila Alimujiang */
-
-/* Base reset and font settings */
+/* Reset CSS */
 * {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
 }
 
+/* Base styles */
 body {
   font-family: 'Open Sans', sans-serif;
-  font-size: 15px;
-  line-height: 1.5;
-  color: #333;
+  color: #222;
+  background-color: white;
+  line-height: 1.6;
+}
+
+/* Container */
+.container {
   max-width: 1200px;
   margin: 0 auto;
+  padding: 20px;
 }
 
-/* Vision section styling - dark background */
-.vision-section {
-  background: #222;
+/* Header */
+header {
+  background-color: #222;
   color: white;
-  padding: 40px 25px;
-  margin: 30px 0;
+  padding: 20px;
+}
+
+nav ul {
+  list-style: none;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 15px;
+}
+
+nav ul li a {
+  color: white;
+  text-decoration: none;
+  padding: 10px 15px;
+}
+
+/* Hero Banner */
+.hero {
+  background: url('images/hero.jpg') no-repeat center center/cover;
+  color: white;
+  padding: 60px 20px;
   text-align: center;
 }
 
-.vision-section h2 {
-  font-size: 24px;
-  margin-bottom: 20px;
-}
-
-/* Team section layout */
-.team-section {
-  padding: 40px 20px;
-}
-
-.team-members {
-  display: flex;
-  flex-direction: column;
-  gap: 40px;
-  max-width: 1000px;
-  margin: 0 auto;
-}
-
-/* Individual team member cards */
-.member {
-  display: flex;
-  flex-direction: column;
-}
-
-.member img {
-  width: 100%;
-  max-width: 300px;
-  margin: 0 auto;
-}
-
-.member-content {
-  text-align: center;
-}
-
-.member h3 {
-  font-size: 20px;
+.hero button {
+  background-color: #c78c06;
   color: #222;
-  margin: 15px 0 5px;
+  border: none;
+  padding: 10px 20px;
+  margin-top: 20px;
 }
 
-.member p.position {
-  color: #555;
-  font-weight: 600;
-  margin-bottom: 15px;
+/* About Section */
+.about {
+  padding: 40px 20px;
+  background-color: #ffe6ac;
 }
 
-/* Contact form styling */
-.contact-section {
+/* Services Section */
+.services {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 20px;
+  background-color: white;
   padding: 40px 20px;
 }
 
-.contact-form input,
-.contact-form textarea {
-  width: 100%;
-  padding: 10px;
-  margin-bottom: 20px;
+.service-card {
+  background-color: #ffe6ac;
+  padding: 20px;
   border: 1px solid #ddd;
 }
 
-.contact-form button {
-  background: #c78c06;
-  color: white;
-  padding: 12px 25px;
-  border: none;
+.service-card h3 {
+  color: #c78c06;
 }
 
-/* Footer section */
-.footer-section {
-  background: #222;
+/* Vision Section */
+.vision {
+  background-color: #222;
   color: white;
-  padding: 30px 20px;
   text-align: center;
+  padding: 60px 20px;
 }
 
-/* Desktop layout adjustments */
-@media (min-width: 768px) {
-  .team-members {
-    flex-direction: row;
-    flex-wrap: wrap;
-    justify-content: space-between;
-  }
-
-  .member {
-    flex: 0 1 48%;
-    flex-direction: row;
-    align-items: flex-start;
-    gap: 20px;
-  }
-
-  .member img {
-    width: 40%;
-    max-width: 200px;
-  }
-
-  .member-content {
-    width: 60%;
-    text-align: left;
-  }
+/* Team Section */
+.team {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  gap: 20px;
+  padding: 40px 20px;
+  background-color: #ffe6ac;
 }
 
-/* Larger screens */
-@media (min-width: 992px) {
-  .member {
-    flex: 0 1 30%;
+.team-member {
+  flex: 1 1 45%;
+  background-color: white;
+  padding: 20px;
+  border: 1px solid #ddd;
+}
+
+/* Contact Section */
+.contact {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  padding: 40px 20px;
+  background-color: white;
+}
+
+.contact-form,
+.map {
+  flex: 1 1 45%;
+}
+
+/* Footer */
+footer {
+  background-color: #222;
+  color: white;
+  text-align: center;
+  padding: 20px;
+  font-size: 0.9rem;
+  margin-top: 40px;
+}
+
+/* Responsive Design */
+@media (min-width: 760px) {
+  .services {
+    grid-template-columns: repeat(3, 1fr);
   }
 }
